@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
+// directly destructure props
 function Form({
   firstName,
   lastName,

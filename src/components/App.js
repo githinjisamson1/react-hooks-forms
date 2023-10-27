@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Form from "./Form";
 
 const App = () => {
+  // states
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [newsLetter, setNewsLetter] = useState(true);
@@ -26,6 +27,7 @@ const App = () => {
   };
   return (
     <React.Fragment>
+      {/* pass in props */}
       <Form
         firstName={firstName}
         lastName={lastName}
