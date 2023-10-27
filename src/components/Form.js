@@ -1,13 +1,27 @@
 import React, { useState } from "react";
 
-function Form() {
-  const [firstName, setFirstName] = useState("John");
-  const [lastName, setLastName] = useState("Henry");
-
+function Form({
+  firstName,
+  lastName,
+  newsLetter,
+  handleFirstname,
+  handleLastname,
+  handleNewsLetter,
+  handleSubmit,
+}) {
   return (
-    <form>
-      <input type="text" value={firstName} />
-      <input type="text" value={lastName} />
+    <form onSubmit={handleSubmit}>
+      <input type="text" value={firstName} onChange={handleFirstname} />
+      <input type="text" value={lastName} onChange={handleLastname} />
+
+      <label htmlFor="news-letter">Subscribe to News Letter?</label>
+      <input
+        type="checkbox"
+        id="news-letter"
+        checked={newsLetter}
+        onChange={handleNewsLetter}
+      />
+
       <button type="submit">Submit</button>
     </form>
   );
